@@ -136,7 +136,14 @@ const Home = () => {
                         {/*<MyDayPicker currentMode={currentMode} currentColor={currentColor} handleClick={handleClick} isClicked={isClicked} />*/}
                     </div>
                     <div className="mt-10 w-72 md:w-400">
-                        {todayStockportfolio.map((item) => (
+                        {todayStockportfolio.sort((a,b) => {
+                                if (a.y === b.y) {
+                                    return 0;
+                                }
+                                else {
+                                    return (a.y < b.y) ? 1 : -1;
+                                }
+                            }).map((item) => (
                             <div key={item.x} className="flex justify-between mt-4">
                                 <div className="flex gap-4">
                                     <button

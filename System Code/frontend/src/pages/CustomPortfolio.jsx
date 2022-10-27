@@ -7,7 +7,7 @@ const axios = require("axios");
 import io from "socket.io-client";
 const socket = io("http://localhost:5000");
 
-const stocktickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOGL", "GOOG", "BRK.B", "UNH", "JNJ", "XOM", "PG", "META", "JPM", "NVDA", "V", "HD", "CVX", "ABBV", "MA", "PFE", "LLY", "PEP"];
+const stocktickers = ["AAPL", "MSFT", "AMZN", "TSLA", "GOOG", "BRK-B", "UNH", "JNJ", "XOM", "PG", "META", "JPM", "NVDA", "V", "HD", "CVX", "ABBV", "MA", "PFE", "LLY", "PEP"];
 const customga = "http://localhost:5000/customga";
 
 const CustomPortfolio = () => {
