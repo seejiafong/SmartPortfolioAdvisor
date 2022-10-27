@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<h2>HTML Forms</h2>
+
+<form method="post">
+  <label for="fname">Ticker Name 1:</label><br>
+  <input type="text" id="ticker1" name="ticker1" value="{{request.form['ticker1']}}"><br>
+  <label for="lname">Ticker Name 2:</label><br>
+  <input type="text" id="ticker2" name="ticker2" value="{{ request.form['ticker2'] }}"><br><br>
+  <label for="fname">Ticker Name 3:</label><br>
+  <input type="text" id="ticker3" name="ticker3" value="{{request.form['ticker3']}}"><br>
+  <label for="lname">Ticker Name 4:</label><br>
+  <input type="text" id="ticker4" name="ticker4" value="{{ request.form['ticker4'] }}"><br><br>
+  <label for="fname">Ticker Name 5:</label><br>
+  <input type="text" id="ticker5" name="ticker5" value="{{request.form['ticker5']}}"><br>
+  <input type="submit" value="Submit">
+</form> 
+
+<p>{{ stock }}</p>
+<p>{{ alloc }}</p>
+</html>
