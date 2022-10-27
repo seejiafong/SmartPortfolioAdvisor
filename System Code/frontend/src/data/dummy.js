@@ -2365,24 +2365,7 @@ export const links = [
         icon: <FiShoppingBag />,
       },
     ],
-  },
-  {
-    title: 'Apps',
-    links: [
-      {
-        name: 'Calendar',
-        icon: <FiShoppingBag />,
-      },
-      {
-        name: 'Todo',
-        icon: <FiShoppingBag />,
-      },
-      {
-        name: 'Community',
-        icon: <FiShoppingBag />,
-      }
-    ]
-  },
+  }
 ];
 
 export const chatData = [
