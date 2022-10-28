@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import GAHyperparameters from './GAHyperparameters';
 import GAEpoch from './GAEpoch';
+import GAResult from './GAResult';
 
 const ConsoleAccordion = ({ message, curState }) => {
   const [active, setActive] = useState(curState);
