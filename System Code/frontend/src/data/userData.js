@@ -1,4 +1,4 @@
-import { SaveAnnotationEventHandler } from "@syncfusion/ej2/pdf-export";
+import { SaveAnnotationEventHandler } from '@syncfusion/ej2/pdf-export';
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
@@ -9,8 +9,8 @@ export const userProfileData = [
     {
         firstname: 'Zhipeng',
         lastname: 'Wang',
-    }
-]
+    },
+];
 
 export const trackedStockData = [
 
@@ -24,7 +24,7 @@ export const trackedStockData = [
       pcColor: 'green-400',
     },
     {
-        icon: "https://logo.clearbit.com/apple.com",
+        icon: 'https://logo.clearbit.com/apple.com',
         amount: '+$12.34',
         title: 'AAPL',
         desc: 'apple.com',
@@ -47,7 +47,7 @@ export const trackedStockData = [
       amount: '+$35.67',
       title: 'NFLX',
       desc: 'netflix.com',
-  
+
       iconColor: 'rgb(228, 106, 118)',
       iconBg: 'rgb(255, 244, 229)',
       pcColor: 'green-400',
@@ -65,45 +65,45 @@ export const trackedStockData = [
 
   export const notificationData = [
     {
-      image:company,
+      image: company,
       message: 'Welcome to Our Group',
       desc: 'Congratulations! You have successfully registered, you are only one step away from financial freedom',
       time: '9:08 AM',
     },
     {
-        image:company,
-        message:'Special Offer, Last 5 Days !',
+        image: company,
+        message: 'Special Offer, Last 5 Days !',
         desc: 'Only need to spend $100 to get our investment advice and achieve financial freedom as soon as possible',
         time: '9:09 AM',
-    }
+    },
   ];
 
   export const chatData = [
     {
-        image:avatar,
+        image: avatar,
         message: 'Please join premium',
         desc: 'With investment advice, I made 100 millions',
         time: '9:08 AM',
       },
       {
-        image:avatar2,
+        image: avatar2,
         message: 'Please join premium',
         desc: 'With investment advice, I made 100 millions',
         time: '9:08 AM',
       },
       {
-        image:avatar3,
+        image: avatar3,
         message: 'Please join premium',
         desc: 'With investment advice, I made 100 millions',
         time: '9:08 AM',
       },
       {
-        image:avatar4,
+        image: avatar4,
         message: 'Please join premium',
         desc: 'With investment advice, I made 100 millions',
         time: '9:08 AM',
       },
-  ]
+  ];
 
   export const scheduleData = [
     {
