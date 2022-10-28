@@ -103,7 +103,6 @@ const CustomPortfolio = () => {
                   Portfolio
                   Optimizations
                   Hyperparameters
-
                   name="stocktickers"
                   dataSource={stocktickers}
                   placeholder="Select Stocks"
