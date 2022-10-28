@@ -22,7 +22,7 @@ import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
 #from tensorflow import keras
-
+import os
 import tensorflow as tf 
 from tensorflow.keras import optimizers
 from tensorflow.keras.models import Sequential
