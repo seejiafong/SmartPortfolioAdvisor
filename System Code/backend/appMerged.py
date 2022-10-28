@@ -38,7 +38,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app)
 numTradeDays = 252
 portfolioValue=1000
-dbName = "stocks.db"
+dbName = os.path.join("/home/sma/Desktop/SmartPortfolioAdvisor-main/System Code/", "frontend/src/database/stocks.db")
+#dbName = "stocks.db"
 database = None
 threads = []
 print('number of processors: ', mp.cpu_count())
@@ -699,11 +700,11 @@ def train_model(stockticker, start_date, end_date, time_step = 40, future_step =
     plt.ylabel('loss')
     plt.xlabel('epoch')
     plt.legend(['train', 'val'], loc='upper left')
-    plt.savefig('Saved_Model_{end_date}/Stock_{stockticker}.png')
+    plt.savefig('Saved_Model/Stock_{stockticker}.png')
     plt.show()
     
     # save model
-    LSTM_model.save(f'Saved_Model_{end_date}/{stockticker}_lstm.h5')
+    LSTM_model.save(f'Saved_Model/{stockticker}_lstm.h5')
 
 def dailyLSTMTrain():
     # use past 40 days to predict future 10 days value
@@ -795,7 +796,8 @@ def getLSTM():
     # List of stocks
     stocktickers=['AAPL','MSFT','AMZN','TSLA','GOOG','BRK-B','UNH','JNJ','XOM','META','NVDA','JPM','PG','V','HD','CVX','MA','PFE','LLY']
     # connect to database
-    conn = sqlite3.connect('lstm_prediction.db')
+    db = os.path.join("/home/sma/Desktop/SmartPortfolioAdvisor-main/System Code/", "frontend/src/database/lstm_prediction.db')
+    conn = sqlite3.connect(db)
     cursor = conn.cursor()
     table_name = "predictions"
     cursor.execute(f'CREATE TABLE IF NOT EXISTS {table_name} (ticker TEXT, date TEXT, price REAL)')
@@ -868,8 +870,8 @@ def dailyGA():
     pullFromYahooAPI(stocktickers, str(dayBeforeYesterday), str(date.today()))
     #runGA(10, stocktickers, 10, 40, 0.3, 0.6, 0.6, '2021-09-27', str(date.today()),0,5,'','')
     
-    #dailyLSTMTrain()
-    #getLSTM()
+    dailyLSTMTrain()
+    getLSTM()
     
     reqId = ''
     customStocktickers = stocktickers
