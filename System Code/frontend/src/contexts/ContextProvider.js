@@ -35,7 +35,7 @@ export const ContextProvider = ({ children }) => {
   const [stockData, setStockData] = useState(undefined);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  const [day, setDay] = useState(new Date('2022-08-22'));
+  const [day, setDay] = useState(new Date());
   const [selectedStock, setSelectedStock] = useState([]);
   // const [stockportfolio, setStockportfolio] = useState(getStockportfolio(new Date().toLocaleDateString()));
   const [stockportfolio, setStockportfolio] = useState([]);
