@@ -7,9 +7,6 @@
 ---
 
 ## SECTION 2 : EXECUTIVE SUMMARY
-There is a common saying that monkeys make better fund managers than humans. This was based on a series of experiments run, the most famous one being a Chimpanzee, Raven,  who threw 10 darts to pick stocks from a basket of 133 internet companies. Her stock picks delivered a 213 per cent gain in 1999, outperforming more than 6,000 professional brokers on Wall Street.
-
-How can the average investor make quality investment decisions? Other than cherry picking stocks, there are many options in the market today, from mutual funds, to index investing and roboadvisories. One way to assess a portfolio’s health is by measuring its returns relative to its risk, to understand if the portfolio is generating a reasonable return for the risk it is assuming. The Sharpe Ratio, proposed by William Sharpe, is one of the most popular methods that is used to measure risk adjusted relative returns in Modern Portfolio Theory.
 
 In this project, we demonstrate the use of Sharpe Ratio as a measure of portfolio fitness to evolve a portfolio of stocks using Genetic Algorithm. We also apply LSTM modeling to forecast future stock prices.
 
@@ -38,19 +35,14 @@ Link to video
 `Refer to User Guide at Github Folder: ProjectReport`
 
 ### To run the system in local machine:
-#### Requirements
+#### System Requirements
+Ubuntu 20.04
+At least 2 Gb of hard disk space
 
+#### Application Requirements
+For frontend: application requirements to be installed using npm for dependencies listed in package.json
+For backend: application requiremetns to be installed using pip for dependencies listed in requirements.txt
 
-> Clone repo
->
-> 
-> Install dependencies
->
-> $ npm install
->
-> run server
->
-> $ npm start
 
 
 ---
@@ -113,6 +105,7 @@ Link to video
 
 `Refer to Github Folder: Miscellaneous`
 
+Efficient Frontier notebook used to generate the efficient frontier images.
 
 ---
 
