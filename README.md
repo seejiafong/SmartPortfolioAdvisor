@@ -26,9 +26,9 @@ In this project, we demonstrate the use of Sharpe Ratio as a measure of portfoli
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-Link to video
-Marketing Video: https://youtu.be/ImGwigIEQMo
-Technical Video: https://youtu.be/YzPpZMfF-SI
+###Link to video
+Marketing Video: https://youtu.be/ImGwigIEQMo <br />
+Technical Video: https://youtu.be/YzPpZMfF-SI <br />
 
 ---
 
@@ -38,11 +38,11 @@ Technical Video: https://youtu.be/YzPpZMfF-SI
 
 ### To run the system in local machine:
 #### System Requirements
-Ubuntu 20.04
+Ubuntu 20.04  <br />
 At least 2 Gb of hard disk space
 
 #### Application Requirements
-For frontend: application requirements to be installed using npm for dependencies listed in package.json
+For frontend: application requirements to be installed using npm for dependencies listed in package.json <br />
 For backend: application requiremetns to be installed using pip for dependencies listed in requirements.txt
 
 
@@ -107,7 +107,7 @@ For backend: application requiremetns to be installed using pip for dependencies
 
 `Refer to Github Folder: Miscellaneous`
 
-Efficient Frontier notebook used to generate the efficient frontier images.
+Efficient Frontier notebook used to generate the efficient frontier images. Note that the database to run the notebook can be found at Frontend/src/database/stocks.db
 
 ---
 
