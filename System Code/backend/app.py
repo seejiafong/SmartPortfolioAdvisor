@@ -38,7 +38,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 cors = CORS(app)
 numTradeDays = 252
 portfolioValue=1000
-dbName = os.path.join("/home/sma/Desktop/SmartPortfolioAdvisor-main/System Code/", "frontend/src/database/stocks.db")
+dbName = os.path.join("/home/sma/deploy/SmartPortfolioAdvisor/System Code/", "frontend/src/database/stocks.db")
 #dbName = "stocks.db"
 database = None
 threads = []
@@ -440,11 +440,12 @@ def runGA(pop_size, stocktickers, maxStocks, maxIterations, selectionRate, cross
            print('total time taken: ', endtime-starttime)
            print("Depth : ", depth)
            stocks = topElite[topElite['alloc'] > 0]
-           stockName = stocks['ticker'].values
+           stockName = stocks['ticker'].tolist()
            allocationPerc = stocks['alloc'].tolist()
+           allocPerc = stocks['alloc'].values
            print("stockName", stockName)
-           print("allocationPerc", allocationPerc)
-           writeGAResults(enddate, runId, iteration,stockName, allocationPerc, sharpeRatio, expectedRisk)
+           print("allocationPerc", allocPerc)
+           writeGAResults(enddate, runId, iteration,stockName, allocPerc, sharpeRatio, expectedRisk)
            sendGAResultToFrontend(enddate, runId, stocktickers, allocationPerc, sharpeRatio,reqId)
            threads.remove((reqId, threading.current_thread()))
            print("threads size ", len(threads))
@@ -458,11 +459,12 @@ def runGA(pop_size, stocktickers, maxStocks, maxIterations, selectionRate, cross
         print('total time taken: ', endtime-starttime)
         print("Depth : ", depth)
         stocks = topElite[topElite['alloc'] > 0]
-        stockName = stocks['ticker'].values
+        stockName = stocks['ticker'].tolist()
         allocationPerc = stocks['alloc'].tolist()
+        allocPerc = stocks['alloc'].values
         print("stockName", stockName)
-        print("allocationPerc", allocationPerc)
-        writeGAResults(enddate, runId, iteration, stockName,allocationPerc, sharpeRatio, expectedRisk)
+        print("allocationPerc", allocPerc)
+        writeGAResults(enddate, runId, iteration, stockName,allocPerc, sharpeRatio, expectedRisk)
         sendGAResultToFrontend(enddate, runId, stocktickers, allocationPerc, sharpeRatio,reqId)
         threads.remove((reqId, threading.current_thread()))
         print("threads size ", len(threads))
@@ -803,7 +805,7 @@ def getLSTM():
     # List of stocks
     stocktickers=['AAPL','MSFT','AMZN','TSLA','GOOG','BRK-B','UNH','JNJ','XOM','META','NVDA','JPM','PG','V','HD','CVX','MA','PFE','LLY']
     # connect to database
-    db = os.path.join("/home/sma/Desktop/SmartPortfolioAdvisor-main/System Code/", "frontend/src/database/lstm_prediction.db")
+    db = os.path.join("/home/sma/deploy/SmartPortfolioAdvisor/System Code/", "frontend/src/database/lstm_prediction.db")
     conn = sqlite3.connect(db)
     cursor = conn.cursor()
     table_name = "predictions"
