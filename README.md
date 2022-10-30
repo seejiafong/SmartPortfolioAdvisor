@@ -26,7 +26,7 @@ In this project, we demonstrate the use of Sharpe Ratio as a measure of portfoli
 
 ## SECTION 4 : VIDEO OF SYSTEM MODELLING & USE CASE DEMO
 
-###Link to video
+###Link to video<br />
 Marketing Video: https://youtu.be/ImGwigIEQMo <br />
 Technical Video: https://youtu.be/YzPpZMfF-SI <br />
 
