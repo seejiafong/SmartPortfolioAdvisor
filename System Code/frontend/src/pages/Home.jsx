@@ -22,7 +22,7 @@ const PickDayButton = ({ currentMode, currentColor, handleClick, isClicked }) =>
 );
 
 const getStockportfolio = (date) => {
-    Axios.post(config.database.url+'/stockportfolio', { date }).then((respose) => {
+    Axios.post(config.database.url+'/stockportfoliolatest', { date }).then((respose) => {
         const { data } = respose;
         // console.log(data);
         const stocktickers = data.stocktickers.replace('[', '').replace(']', '').replace(/\'/g, '').split(/,\s*/);
