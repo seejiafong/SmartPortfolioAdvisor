@@ -20,8 +20,7 @@ app.post('/stockportfolio', (req, res) => {
     db.serialize(() => {
         // db.each(`SELECT stocktickers,chromosome,max(sharpe) FROM garesults WHERE date='${day}'`, (err, row) => {
         db.each(
-'SELECT date,stocktickers,chromosome,max(sharpe) as sharpe,return,risk FROM garesults WHERE date is ?',
-        [date],
+        'SELECT max(a.date) as date ,stocktickers,chromosome,a.sharpe,a.return,a.risk FROM (SELECT date,stocktickers,chromosome,max(sharpe) as sharpe,return,risk FROM garesults group by date) as a',
         (err, row) => {
             if (err) {
                 console.error(err.message);
