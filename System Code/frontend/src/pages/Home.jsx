@@ -67,7 +67,7 @@ const Home = () => {
 
     useEffect(() => {
         let isMounted = true;
-        Axios.post(config.database.url+'/stockportfolio', { date: formatDate(new Date()) }).then((respose) => {
+        Axios.post(config.database.url+'/stockportfoliolatest', { date: formatDate(new Date()) }).then((respose) => {
             if (isMounted) {
                 const { data } = respose;
                 const stocktickers = data.stocktickers.replace('[', '').replace(']', '').replace(/\'/g, '').split(/,\s*/);
